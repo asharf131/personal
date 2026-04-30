@@ -46,7 +46,8 @@ class ProjectController extends Controller
 
         Project::create($data);
 
-        return redirect()->route('projects.index')->with('success', 'Project created successfully');
+        flash()->addSuccess('Project created successfully');
+        return redirect()->route('projects.index');
     }
 
     /**
@@ -81,7 +82,8 @@ class ProjectController extends Controller
 
         $project->update($data);
 
-        return redirect()->route('projects.index')->with('success', 'Project updated successfully');
+        flash()->addSuccess('Project updated successfully');
+        return redirect()->route('projects.index');
     }
 
     /**
@@ -94,6 +96,7 @@ class ProjectController extends Controller
         }
         $project->delete();
 
-        return redirect()->route('projects.index')->with('warning', 'Project deleted successfully');
+        flash()->error('Project deleted successfully');
+        return redirect()->route('projects.index');
     }
 }

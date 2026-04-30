@@ -16,6 +16,18 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="{{ asset('passets\css\styles.css') }}" rel="stylesheet" />
+        <style>
+            @media print {
+                body {
+                    -webkit-print-color-adjust: exact !important;
+                    print-color-adjust: exact !important;
+                }
+                /* Hide navigation and footer for a cleaner printed document */
+                nav, footer, .btn {
+                    display: none !important;
+                }
+            }
+        </style>
     </head>
     <body class="d-flex flex-column h-100">
         <main class="flex-shrink-0">
@@ -63,6 +75,7 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="{{ asset('passets\js\scripts.js') }}"></script>
+        @flasher_render
     </body>
 </html>
 

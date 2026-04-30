@@ -36,7 +36,8 @@ class SkillController extends Controller
 
         Skill::create($request->all());
 
-        return redirect()->route('skills.index')->with('success', 'Skill added successfully');
+        flash()->addSuccess('Skill added successfully');
+        return redirect()->route('skills.index');
     }
 
     /**
@@ -58,7 +59,8 @@ class SkillController extends Controller
 
         $skill->update($request->all());
 
-        return redirect()->route('skills.index')->with('success', 'Skill updated successfully');
+        flash()->addSuccess('Skill updated successfully');
+        return redirect()->route('skills.index');
     }
 
     /**
@@ -68,6 +70,7 @@ class SkillController extends Controller
     {
         $skill->delete();
 
-        return redirect()->route('skills.index')->with('warning', 'Skill deleted successfully');
+        flash()->error('Skill deleted successfully');
+        return redirect()->route('skills.index');
     }
 }

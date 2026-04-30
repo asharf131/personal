@@ -1,7 +1,6 @@
 @extends('personal.app')
 @section('title', 'Resume | ' . ($settings['site_name'] ?? env('APP_NAME')))
 @section('content')
-
             <!-- Page Content-->
             <div class="container px-5 my-5">
                 <div class="text-center mb-5">
@@ -13,7 +12,7 @@
                         <section>
                             <div class="d-flex align-items-center justify-content-between mb-4">
                                 <h2 class="text-primary fw-bolder mb-0">Experience</h2>
-                                <a class="btn btn-primary px-4 py-3" href="#!">
+                                <a class="btn btn-primary px-4 py-3" href="javascript:void(0)" onclick="window.print()">
                                     <div class="d-inline-block bi bi-download me-2"></div>
                                     Download Resume
                                 </a>

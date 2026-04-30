@@ -36,7 +36,8 @@ class LanguageController extends Controller
 
         Language::create($request->all());
 
-        return redirect()->route('languages.index')->with('success', 'Language added successfully');
+        flash()->addSuccess('Language added successfully');
+        return redirect()->route('languages.index');
     }
 
     /**
@@ -58,7 +59,8 @@ class LanguageController extends Controller
 
         $language->update($request->all());
 
-        return redirect()->route('languages.index')->with('success', 'Language updated successfully');
+        flash()->addSuccess('Language updated successfully');
+        return redirect()->route('languages.index');
     }
 
     /**
@@ -68,6 +70,7 @@ class LanguageController extends Controller
     {
         $language->delete();
 
-        return redirect()->route('languages.index')->with('warning', 'Language deleted successfully');
+        flash()->error('Language deleted successfully');
+        return redirect()->route('languages.index');
     }
 }

@@ -49,7 +49,8 @@ class AppController extends Controller
 
         Message::create($request->all());
 
-        return back()->with('success', 'Your message has been sent successfully!');
+        flash()->addSuccess('Your message has been sent successfully!');
+        return back();
     }
 
     public function projects()

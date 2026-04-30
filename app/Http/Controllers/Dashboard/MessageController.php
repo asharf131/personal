@@ -32,7 +32,8 @@ class MessageController extends Controller
 
         Message::create($request->all());
 
-        return back()->with('success', 'Message sent successfully');
+        flash()->addSuccess('Message sent successfully');
+        return back();
     }
 
     /**
@@ -50,6 +51,7 @@ class MessageController extends Controller
     {
         $message->delete();
 
-        return redirect()->route('messages.index')->with('warning', 'Message deleted successfully');
+        flash()->error('Message deleted successfully');
+        return redirect()->route('messages.index');
     }
 }

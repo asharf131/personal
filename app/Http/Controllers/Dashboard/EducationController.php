@@ -41,7 +41,7 @@ class EducationController extends Controller
 
         Education::create($request->all());
 
-        toastr()->addSuccess('Education added successfully');
+        flash()->addSuccess('Education added successfully');
 
         return redirect()->route('educations.index');
     }
@@ -70,7 +70,7 @@ class EducationController extends Controller
 
         $education->update($request->all());
 
-        toastr()->addSuccess('Education updated successfully');
+        flash()->addSuccess('Education updated successfully');
 
         return redirect()->route('educations.index');
     }
