@@ -40,7 +40,7 @@ class ExperienceController extends Controller
         ]);
         Experience::create($request->all());
 
-        flash()->addSuccess('Experience created successfully');
+        flash()->success('Experience created successfully');
 
         return redirect()->route('experiences.index');
     
@@ -79,7 +79,7 @@ class ExperienceController extends Controller
 
         $experience->update($request->all());
 
-        flash()->addSuccess('Experience updated successfully');
+        flash()->success('Experience updated successfully');
 
         return redirect()->route('experiences.index');
     }

@@ -10,7 +10,7 @@
                     </div>
                     <div class="row gx-5 justify-content-center">
                         <div class="col-lg-11 col-xl-9 col-xxl-8">
-                            
+
                             @forelse($projects as $project)
                             <!-- Project Card -->
                             <div class="card overflow-hidden shadow rounded-4 border-0 mb-5">
@@ -26,7 +26,7 @@
                                             @endif
                                         </div>
                                         @if($project->image)
-                                        <img class="img-fluid" src="{{ asset('storage/' . $project->image) }}" alt="{{ $project->title }}" style="width: 300px; height: 400px; object-cover" />
+                                        <img class="img-fluid" src="{{ asset('storage/' . $project->image) }}" alt="{{ $project->title }}" style="width: 300px;  object-cover" />
                                         @else
                                         <div class="bg-light d-flex align-items-center justify-content-center" style="width: 300px; height: 400px;">
                                             <i class="bi bi-image text-muted fs-1"></i>
@@ -43,7 +43,7 @@
                     </div>
                 </div>
             </section>
-            
+
             <!-- Call to action section-->
             <section class="py-5 bg-gradient-primary-to-secondary text-white">
                 <div class="container px-5 my-5">
@@ -53,5 +53,5 @@
                     </div>
                 </div>
             </section>
-   
+
 @endsection

@@ -32,7 +32,7 @@ class MessageController extends Controller
 
         Message::create($request->all());
 
-        flash()->addSuccess('Message sent successfully');
+        flash()->success('Message sent successfully');
         return back();
     }
 

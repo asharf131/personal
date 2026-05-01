@@ -49,7 +49,7 @@ class AppController extends Controller
 
         Message::create($request->all());
 
-        flash()->addSuccess('Your message has been sent successfully!');
+        flash()->success('Your message has been sent successfully!');
         return back();
     }
 

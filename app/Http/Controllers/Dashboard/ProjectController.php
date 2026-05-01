@@ -46,7 +46,7 @@ class ProjectController extends Controller
 
         Project::create($data);
 
-        flash()->addSuccess('Project created successfully');
+        flash()->success('Project created successfully');
         return redirect()->route('projects.index');
     }
 
@@ -82,7 +82,7 @@ class ProjectController extends Controller
 
         $project->update($data);
 
-        flash()->addSuccess('Project updated successfully');
+        flash()->success('Project updated successfully');
         return redirect()->route('projects.index');
     }
 

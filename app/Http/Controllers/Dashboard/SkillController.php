@@ -36,7 +36,7 @@ class SkillController extends Controller
 
         Skill::create($request->all());
 
-        flash()->addSuccess('Skill added successfully');
+        flash()->success('Skill added successfully');
         return redirect()->route('skills.index');
     }
 
@@ -59,7 +59,7 @@ class SkillController extends Controller
 
         $skill->update($request->all());
 
-        flash()->addSuccess('Skill updated successfully');
+        flash()->success('Skill updated successfully');
         return redirect()->route('skills.index');
     }
 

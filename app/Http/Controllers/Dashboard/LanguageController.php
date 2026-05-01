@@ -36,7 +36,7 @@ class LanguageController extends Controller
 
         Language::create($request->all());
 
-        flash()->addSuccess('Language added successfully');
+        flash()->success('Language added successfully');
         return redirect()->route('languages.index');
     }
 
@@ -59,7 +59,7 @@ class LanguageController extends Controller
 
         $language->update($request->all());
 
-        flash()->addSuccess('Language updated successfully');
+        flash()->success('Language updated successfully');
         return redirect()->route('languages.index');
     }
 

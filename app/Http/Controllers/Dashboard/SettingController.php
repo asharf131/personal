@@ -31,7 +31,7 @@ class SettingController extends Controller
             );
         }
 
-        flash()->addSuccess('Settings updated successfully');
+        flash()->success('Settings updated successfully');
         return redirect()->route('settings.index');
     }
 }
