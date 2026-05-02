@@ -70,7 +70,7 @@ class SkillController extends Controller
     {
         $skill->delete();
 
-        flash()->error('Skill deleted successfully');
+        flash()->warning('Skill deleted successfully');
         return redirect()->route('skills.index');
     }
 }

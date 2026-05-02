@@ -51,7 +51,7 @@ class MessageController extends Controller
     {
         $message->delete();
 
-        flash()->error('Message deleted successfully');
+        flash()->warning('Message deleted successfully');
         return redirect()->route('messages.index');
     }
 }

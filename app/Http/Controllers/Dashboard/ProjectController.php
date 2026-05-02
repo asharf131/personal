@@ -96,7 +96,7 @@ class ProjectController extends Controller
         }
         $project->delete();
 
-        flash()->error('Project deleted successfully');
+        flash()->warning('Project deleted successfully');
         return redirect()->route('projects.index');
     }
 }

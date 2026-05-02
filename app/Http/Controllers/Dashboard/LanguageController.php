@@ -70,7 +70,7 @@ class LanguageController extends Controller
     {
         $language->delete();
 
-        flash()->error('Language deleted successfully');
+        flash()->warning('Language deleted successfully');
         return redirect()->route('languages.index');
     }
 }

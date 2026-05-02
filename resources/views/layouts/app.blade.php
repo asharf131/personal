@@ -62,6 +62,5 @@
             </div>
         @endif
 
-        @flasher_render
     </body>
 </html>

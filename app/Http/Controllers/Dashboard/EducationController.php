@@ -82,7 +82,7 @@ class EducationController extends Controller
     {
         $education->delete();
 
-        flash()->error('Education deleted successfully');
+        flash()->warning('Education deleted successfully');
 
         return redirect()->route('educations.index');
     }

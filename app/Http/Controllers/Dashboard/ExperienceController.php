@@ -91,7 +91,7 @@ class ExperienceController extends Controller
     {
         $experience->delete();
 
-        flash()->error('Experience deleted successfully');
+        flash()->warning('Experience deleted successfully');
 
         return redirect()->route('experiences.index');
     }
